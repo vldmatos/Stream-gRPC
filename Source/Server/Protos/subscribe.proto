@@ -1,0 +1,20 @@
+syntax = "proto3";
+option csharp_namespace = "Server";
+package subscribe;
+
+service Subscribe 
+{
+	rpc Sign (Content) returns (Signature);
+}
+
+message Content 
+{
+	string name = 1;
+	string category = 2;
+	float price = 3;
+}
+
+message Signature 
+{
+	string id = 1;
+}
